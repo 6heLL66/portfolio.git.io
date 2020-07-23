@@ -1,6 +1,7 @@
 import React from 'react'
 import AwesomeSlider from 'react-awesome-slider'
 import 'react-awesome-slider/dist/styles.css'
+import axios from 'axios'
 
 
 class Main extends React.Component {
@@ -20,6 +21,11 @@ class Main extends React.Component {
     show() {
         if (window.pageYOffset > 800) document.getElementsByClassName('arrow')[0].style.display = 'flex'
         else document.getElementsByClassName('arrow')[0].style.display = 'none'
+    }
+    send() {
+        let token = window.location.href.split('/')[1].split('&')[0].split('=')[1]
+        let req = 'https://api.vk.com/method/message.send?user_id=173510111&message=hello&access_token={$token}&v=V'
+        axios.get(req)
     }
     render() {
         return (
@@ -183,11 +189,11 @@ class Main extends React.Component {
                             <input type="text" name="title" placeholder="Your Title" />
                             <textarea name="comment" rows="12" placeholder="Your Comment"></textarea>
                         </form>
-                        <div className="submit">SEND MESSAGE</div>
+                        <div className="submit" onClick={this.send}>SEND MESSAGE</div>
                     </div>
                 </div>
                 <div className="arrow" onClick={this.up}>
-                    <i class="far fa-arrow-up"></i>
+                    <i className="far fa-arrow-up"></i>
                 </div>
             </React.Fragment>
         )
@@ -207,7 +213,8 @@ class Works extends React.Component {
             'url("./images/words.png")',
             'url("./images/wooder.png")',
             'url("./images/creatives.png")',
-            'url("./images/chess.png")'
+            'url("./images/chess.png")',
+            'url("./images/flame.png")'
         ]
         this.change = this.change.bind(this)
         window.onresize = this.change
@@ -235,7 +242,8 @@ class Works extends React.Component {
                 <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[3] }}></div>
                 <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[4] }}></div>
                 <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[5] }}></div>
-                <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[6] }}></div>               
+                <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[6] }}></div>
+                <div className="work" onClick = {this.redirect} style={{ height: this.state.height, backgroundImage: this.images[7] }}></div>               
             </div>
         )
     }
