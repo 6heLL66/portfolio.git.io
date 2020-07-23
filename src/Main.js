@@ -229,7 +229,7 @@ class Works extends React.Component {
             window.location.href = 'https://chessnode.herokuapp.com/'
         }
         else{
-            window.location.href += '/projects/' + e.target.style.backgroundImage.split('/')[2].split('.')[0] + '/' + e.target.style.backgroundImage.split('/')[2].split('.')[0] + '.html'
+            window.location.href += 'https://6hell66.github.io/interesting.git.io/' + e.target.style.backgroundImage.split('/')[2].split('.')[0] + '/index.html'
         }
         
     }
