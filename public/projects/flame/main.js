@@ -142,7 +142,10 @@ function getShader(tieblan, type) {
 }
 canvas.onmousedown = () => ismousedown = true
 canvas.onmouseup = () => ismousedown = false
-canvas.onmousemove = (e) => mousePos = { x: e.clientX / canvas.width * 2 - 1, y: e.clientY / canvas.height * 2 - 1 } 
+canvas.onmousemove = (e) => mousePos = { x: e.clientX / canvas.width * 2 - 1, y: e.clientY / canvas.height * 2 - 1 }
+canvas.touchstart = () => ismousedown = true
+canvas.touchend = () => ismousedown = false
+canvas.touchmove = () => mousePos = { x: e.clientX / canvas.width * 2 - 1, y: e.clientY / canvas.height * 2 - 1 }
 
 
 vertexShader = getShader(vertexShader, "daniklox")
