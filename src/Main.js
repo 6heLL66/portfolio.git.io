@@ -31,6 +31,9 @@ class Main extends React.Component {
         return (
             <React.Fragment>
                 <div className="block-1">
+                    <div className="img-block">
+                        <img src="./images/anime2.png"  />
+                    </div>
                     <div className="text-block">
                         <h1>We Design and Develop</h1>
                         <p>We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps</p>

@@ -69,6 +69,14 @@ header {
 	justify-content: flex-start;
 	align-items: flex-start;
 }
+.img-block {
+	width: 55%;
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .block-1 .text-block {
 	width: 45%;
 	height: 300px;
