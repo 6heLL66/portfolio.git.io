@@ -22,11 +22,6 @@ class Main extends React.Component {
         if (window.pageYOffset > 800) document.getElementsByClassName('arrow')[0].style.display = 'flex'
         else document.getElementsByClassName('arrow')[0].style.display = 'none'
     }
-    send() {
-        let token = window.location.href.split('/')[1].split('&')[0].split('=')[1]
-        let req = 'https://api.vk.com/method/message.send?user_id=173510111&message=hello&access_token={$token}&v=V'
-        axios.get(req)
-    }
     render() {
         return (
             <React.Fragment>
@@ -192,7 +187,7 @@ class Main extends React.Component {
                             <input type="text" name="title" placeholder="Your Title" />
                             <textarea name="comment" rows="12" placeholder="Your Comment"></textarea>
                         </form>
-                        <div className="submit" onClick={this.send}>SEND MESSAGE</div>
+                        <div className="submit">SEND MESSAGE</div>
                     </div>
                 </div>
                 <div className="arrow" onClick={this.up}>
