@@ -134,6 +134,12 @@ header {
 	justify-content: space-around;
 	background: #F8F9F9;
 }
+.block-3 .skills-bar h1 {
+	width: 60%;
+	text-align: start;
+	font-size: 37px;
+	margin-bottom: 0;
+}
 .skills-bar {
 	width: 50%;
 	height: 50%;
@@ -432,5 +438,17 @@ footer {
 	}
 	.text {
 		font-size: 24px;
+	}
+	.block-3 .skills-bar h1 {
+		font-size: 31px;
+	}
+	.block-4 .item p {
+		font-size: 10px;
+	}
+	.block-4 .item h1 {
+		font-size: 17px;
+	}
+	.block-4 .item i {
+		font-size: 48px;
 	}
 }
