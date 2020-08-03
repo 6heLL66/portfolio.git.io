@@ -10,6 +10,7 @@ let canvasTest = document.getElementById('canvaTest')
 let ctxTest = canvasTest.getContext("2d")
 let c = 0
 let animated = false
+let up
 
 document.getElementById('btn').onclick = function() {
 	c++
@@ -41,7 +42,7 @@ document.getElementById('btn').onclick = function() {
 	setPixels(to.length)
 	drawPixels()
 	
-	let up = setInterval(update, 20)
+	up = setInterval(update, 20)
 	setTimeout(function() {
 		clearInterval(up)
 		animated = false
@@ -61,7 +62,7 @@ document.getElementById('btn').onclick = function() {
 
 					let obj = {
 						color: [0, 0, 0, 255],
-						pos: [posX,posY],
+						pos: [posX, posY],
 						to: [to[i][0], to[i][1]],
 						speed: speed
 					}
