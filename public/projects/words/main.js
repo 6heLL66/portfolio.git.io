@@ -112,7 +112,7 @@ document.getElementById('btn').onclick = function() {
 				
 		}
 		let time = 0
-		up = setInterval(update, 20)
+		let up = setInterval(update, 20)
 		setTimeout(function() {
 		clearInterval(up)
 		animated = false
